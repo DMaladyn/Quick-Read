@@ -1,0 +1,36 @@
+.middle {
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+.ger {
+  background-color: aliceblue;
+}
+
+.reset_button {
+  text-align: center;
+}
+
+.reset_button button {
+  font-size: 2rem;
+  border-radius: 1.2rem;
+  padding: 0.3rem;
+  background-color: rgb(37, 189, 37);
+}
+
+.reset_button button:hover {
+  background-color: rgb(31, 158, 31);
+}
+
+.reset_button button:active {
+  background-color: rgb(28, 138, 28);
+}
+
+.main div {
+  padding-bottom: 0.4rem;
+}
+
+.settings {
+  margin: 2rem;
+}

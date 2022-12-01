@@ -1,0 +1,61 @@
+.settings {
+  font-size: 2rem;
+  background-color: rgb(158, 196, 97);
+  border: 0.18rem solid #0b1e4b;
+  border-radius: 1.2rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+}
+
+.name {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.adjust {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  padding: 1rem;
+}
+
+.option {
+  font-size: 2rem;
+}
+
+.plusButton {
+  background-color: rgb(18, 221, 0);
+  border-radius: 1.2rem;
+}
+
+.minusButton {
+  background-color: red;
+  border-radius: 1.2rem;
+}
+
+.plusButton:hover {
+  background-color: rgb(16, 194, 0);
+}
+
+.minusButton:hover {
+  background-color: rgb(223, 0, 0);
+}
+
+.plusButton:active {
+  background-color: rgb(12, 148, 0);
+}
+
+.minusButton:active {
+  background-color: rgb(172, 0, 0);
+}
+
+.input {
+  font-size: 2rem;
+  background-color: rgb(158, 196, 97);
+  border: none;
+}
+
+.form {
+  width: 100%;
+}

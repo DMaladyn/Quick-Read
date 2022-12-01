@@ -1,0 +1,109 @@
+.whole {
+  display: grid;
+  grid-template-columns: 100vw 0vw;
+}
+
+.settings_img {
+  width: 5vw;
+  height: 5vw;
+}
+
+.settings {
+  /*   border: 2px solid black; */
+  position: relative;
+  left: -5vw;
+}
+
+.option {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.option select {
+  width: 30%;
+  height: 2rem;
+  background-color: #4a8f69;
+  border: 2px solid rgb(13, 85, 13);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.option input {
+  width: 28%;
+  height: 2rem;
+  background-color: #4a8f69;
+  border: 2px solid rgb(13, 85, 13);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.settingsWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  text-align: center;
+  width: 40vw;
+  height: 60vh;
+  border: 2px solid black;
+  background-color: #4e8165;
+}
+
+.backgroundSettings {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  opacity: 0.25;
+}
+
+.center {
+  text-align: center;
+}
+
+/* available height is 93.5 vh */
+
+.one {
+  display: grid;
+  grid-template-rows: 31.1666666666vh 31.1666666666vh 31.1666666666vh;
+  grid-template-columns: 33.333333333vw 33.333333333vw 33.333333333vw;
+  grid-gap: 0px;
+  border: 3px;
+}
+
+.two {
+  display: grid;
+  grid-template-rows: 18.7vh 18.7vh 18.7vh 18.7vh 18.7vh;
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  grid-gap: 0px;
+  border: 3px;
+}
+
+.three {
+  display: grid;
+  grid-template-rows: 13.35714vh 13.35714vh 13.35714vh 13.35714vh 13.35714vh 13.35714vh 13.35714vh;
+  grid-template-columns: 14.285714vw 14.285714vw 14.285714vw 14.285714vw 14.285714vw 14.285714vw 14.285714vw;
+  grid-gap: 0px;
+  border: 3px;
+}
+
+.four {
+  display: grid;
+  grid-template-rows: 10.3888888vh 10.3888888vh 10.3888888vh 10.3888888vh 10.3888888vh 10.3888888vh 10.3888888vh 10.3888888vh 10.3888888vh;
+  grid-template-columns: 11.111111111vw 11.111111111vw 11.111111111vw 11.111111111vw 11.111111111vw 11.111111111vw 11.111111111vw 11.111111111vw 11.111111111vw;
+  grid-gap: 0px;
+  border: 3px;
+}
+
+.five {
+  display: grid;
+  grid-template-rows: 8.5vh 8.5vh 8.5vh 8.5vh 8.5vh 8.5vh 8.5vh 8.5vh 8.5vh 8.5vh 8.5vh;
+  grid-template-columns: 9.09090909vw 9.09090909vw 9.09090909vw 9.09090909vw 9.09090909vw 9.09090909vw 9.09090909vw 9.09090909vw 9.09090909vw 9.09090909vw 9.09090909vw;
+  grid-gap: 0px;
+  border: 3px;
+}

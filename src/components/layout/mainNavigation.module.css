@@ -1,0 +1,39 @@
+header {
+  width: 100%;
+  display: flex;
+  background-color: #3f5c4c;
+  align-items: center;
+  justify-content: space-between;
+  height: 6.5vh;
+}
+
+.header ul {
+  align-items: baseline;
+  display: flex;
+  list-style: none;
+}
+
+.header li {
+  color: rgb(129, 160, 57);
+  margin-right: 6rem;
+  font-size: 2rem;
+}
+
+a {
+  color: rgb(129, 160, 57);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(154, 192, 65);
+}
+.logo {
+  margin-left: 2rem;
+  font-size: 2rem;
+  color: rgb(129, 160, 57);
+  font-weight: bold;
+}
+
+.links {
+  align-items: right;
+  align-self: right;
+}
