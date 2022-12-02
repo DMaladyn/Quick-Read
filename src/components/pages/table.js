@@ -7,6 +7,8 @@ import TablePiece from "../parts/tablePiece";
 function Table() {
   const fontInput = useRef();
   const lvlInput = useRef();
+  const amountInput = useRef();
+  const lettersInput = useRef();
 
   const table = [];
 
@@ -15,6 +17,10 @@ function Table() {
   const [font, setFont] = useState(3);
 
   const [lvl, setLvl] = useState(0);
+
+  const [amount, setAmount] = useState(1);
+
+  const [letters, setLetters] = useState("LBig");
 
   const level = [
     {
@@ -40,7 +46,7 @@ function Table() {
   ];
 
   for (let i = 0; i < level[lvl].loop; i++) {
-    table.push(<TablePiece font={font} />);
+    table.push(<TablePiece font={font} amount={amount} letters={letters} />);
   }
 
   function openSettings() {
@@ -55,6 +61,8 @@ function Table() {
     setSettings(false);
     setFont(fontInput.current.value / 10);
     setLvl(lvlInput.current.value);
+    setLetters(lettersInput.current.value);
+    setAmount(amountInput.current.value);
 
     console.log("submitted");
   }
@@ -92,9 +100,30 @@ function Table() {
                 </select>
 
                 <div>
-                  <label>Level</label>
+                  <label>Character Type</label>
+                </div>
+                <select defaultValue={letters} ref={lettersInput}>
+                  <option value="LBig">Big Letters</option>
+                  <option value="LSmall">Small Letters</option>
+                  <option value="N">Numbers</option>
+                  <option value="BothBig">Big Letters & Numbers</option>
+                  <option value="BothSmall">Small Letters & Numbers</option>
+                  <option value="All">Everything</option>
+                </select>
+
+                <div>
+                  <label>Font Size</label>
                 </div>
                 <input defaultValue={font * 10} ref={fontInput} />
+
+                <div>
+                  <label>Amount per Grid</label>
+                </div>
+                <input defaultValue={amount} ref={amountInput} />
+
+                <div>
+                  <button>Start</button>
+                </div>
               </form>
             </div>
           </div>
