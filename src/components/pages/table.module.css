@@ -62,6 +62,24 @@
   opacity: 0.25;
 }
 
+.start {
+  background-color: #4a8f69;
+  border: 2px solid rgb(13, 85, 13);
+  width: 15%;
+  padding: 1%;
+  margin-top: 1rem;
+  font-size: 80%;
+  font-weight: bold;
+}
+
+.start:hover {
+  background-color: #3e7959;
+}
+
+.start:active {
+  background-color: #35684c;
+}
+
 .center {
   text-align: center;
 }

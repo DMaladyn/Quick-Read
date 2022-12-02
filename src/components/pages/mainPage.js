@@ -22,7 +22,10 @@ function MainPage() {
         To do it you can use available exercises such as:
         <ul>
           <li>
-            <div onClick={pyramidDescr}> Pyramid</div>
+            <div onClick={pyramidDescr} className={classes.expandable}>
+              {" "}
+              Pyramid
+            </div>
             {pyramid && (
               <div className={classes.descr}>
                 <span>
@@ -32,7 +35,9 @@ function MainPage() {
             )}
           </li>
           <li>
-            <div onClick={tableDescr}> Table</div>
+            <div onClick={tableDescr} className={classes.expandable}>
+              Table
+            </div>
             {table && (
               <div className={classes.descr}>
                 <span>

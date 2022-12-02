@@ -57,7 +57,9 @@ function Table() {
     setSettings(false);
   }
 
-  function submitSettings() {
+  function submitSettings(event) {
+    event.preventDefault();
+
     setSettings(false);
     setFont(fontInput.current.value / 10);
     setLvl(lvlInput.current.value);
@@ -122,7 +124,7 @@ function Table() {
                 <input defaultValue={amount} ref={amountInput} />
 
                 <div>
-                  <button>Start</button>
+                  <button className={classes.start}>Start</button>
                 </div>
               </form>
             </div>
