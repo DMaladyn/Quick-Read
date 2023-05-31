@@ -116,12 +116,22 @@ function Table() {
                 <div>
                   <label>Font Size</label>
                 </div>
-                <input defaultValue={font * 10} ref={fontInput} />
+                <input
+                  defaultValue={font * 10}
+                  ref={fontInput}
+                  type="number"
+                  min="1"
+                />
 
                 <div>
                   <label>Amount per Grid</label>
                 </div>
-                <input defaultValue={amount} ref={amountInput} />
+                <input
+                  defaultValue={amount}
+                  ref={amountInput}
+                  type="number"
+                  min="1"
+                />
 
                 <div>
                   <button className={classes.start}>Start</button>
