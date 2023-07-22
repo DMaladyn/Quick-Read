@@ -1,10 +1,14 @@
 import { useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExpand } from "@fortawesome/free-solid-svg-icons";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 import classes from "./table.module.css";
 import TablePiece from "../parts/tablePiece";
 /* import TableSettings from "../parts/tableSettings"; */
 
 function Table() {
+  /* creates references that will be used while submiting settings */
   const fontInput = useRef();
   const lvlInput = useRef();
   const amountInput = useRef();
@@ -12,6 +16,7 @@ function Table() {
 
   const table = [];
 
+  /* settings up all states with default values */
   const [settings, setSettings] = useState(false);
 
   const [font, setFont] = useState(3);
@@ -22,6 +27,7 @@ function Table() {
 
   const [letters, setLetters] = useState("LBig");
 
+  /* layouts for different diffiticulty levels */
   const level = [
     {
       grid: classes.one,
@@ -45,6 +51,7 @@ function Table() {
     },
   ];
 
+  /* pushes tablepieces to an array "table" with current data */
   for (let i = 0; i < level[lvl].loop; i++) {
     table.push(<TablePiece font={font} amount={amount} letters={letters} />);
   }
@@ -57,6 +64,7 @@ function Table() {
     setSettings(false);
   }
 
+  /* changes data to values inserted in settings box */
   function submitSettings(event) {
     event.preventDefault();
 
@@ -69,19 +77,42 @@ function Table() {
     console.log("submitted");
   }
 
+  /* turns on full screen */
+  function handleFullScreem() {
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      // Firefox
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      // Chrome, Safari and Opera
+      document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) {
+      // IE/Edge
+      document.documentElement.msRequestFullscreen();
+    }
+  }
+
   return (
     <div className={classes.whole}>
       <div className={classes.center}>
         <div className={level[lvl].grid}>{table}</div>
+        <div className={classes.dot}></div>
       </div>
       <div className={classes.settings}>
         {!settings && (
-          <img
-            src={require("../parts/gear.png")}
-            alt="alt"
-            className={classes.settings_img}
-            onClick={openSettings}
-          />
+          <div>
+            <FontAwesomeIcon
+              className={classes.settings_img}
+              onClick={openSettings}
+              icon={faGear}
+            />
+            <FontAwesomeIcon
+              className={classes.settings_img}
+              onClick={handleFullScreem}
+              icon={faExpand}
+            />
+          </div>
         )}
       </div>
       <div>

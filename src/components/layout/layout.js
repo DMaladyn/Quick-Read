@@ -1,6 +1,7 @@
 import MainNavigation from "./mainNavigation";
 import classes from "./layout.module.css";
 
+/* Layout joins together MainNavigation and whichever component url is pointing at */
 function Layout(props) {
   return (
     <div>

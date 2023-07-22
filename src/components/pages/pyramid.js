@@ -5,6 +5,8 @@ import PyramidPiece from "../parts/pyramidPiece";
 import { useState } from "react";
 
 function Pyramid(props) {
+  /* sets up states for all variables that are later passed forward creating pyramid from
+  other components */
   var [space, setSpace] = useState(JSON.parse(localStorage.getItem("space")));
   var [line, setLine] = useState(JSON.parse(localStorage.getItem("line")));
   var [loop, setLoop] = useState(JSON.parse(localStorage.getItem("loop")));
@@ -16,6 +18,7 @@ function Pyramid(props) {
     JSON.parse(localStorage.getItem("letters"))
   );
 
+  /* listens for change in localstorage and then based on it updates states */
   window.addEventListener("storage", () => {
     setSpace(JSON.parse(localStorage.getItem("space")));
     setLine(JSON.parse(localStorage.getItem("line")));
@@ -25,6 +28,7 @@ function Pyramid(props) {
     setLetters(JSON.parse(localStorage.getItem("letters")));
   });
 
+  /* makes sure there are no undefined states so site wont crash */
   if (space == null) {
     space = 1;
     localStorage.setItem("space", JSON.stringify(1));
@@ -50,6 +54,7 @@ function Pyramid(props) {
     localStorage.setItem("letters", JSON.stringify(true));
   }
 
+  /* passes data to PyramidPiece that is being pushed to "pyramid" array */
   const pyramid = [];
   for (let i = 0; i < loop; i++) {
     pyramid.push(

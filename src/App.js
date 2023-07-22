@@ -8,9 +8,11 @@ import Table from "./components/pages/table";
 
 function App() {
   return (
+    /* routing system between MainPage, Pyramid and Table */
     <Layout>
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/Quick-Read" element={<MainPage />} />
         <Route path="/pyramid" element={<Pyramid />} />
         <Route path="/table" element={<Table />} />
       </Routes>

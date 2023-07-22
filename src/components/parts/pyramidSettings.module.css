@@ -59,3 +59,10 @@
 .form {
   width: 100%;
 }
+
+.settings_img {
+  margin-top: -20px;
+  float: right;
+  width: 3vw;
+  height: 3vw;
+}

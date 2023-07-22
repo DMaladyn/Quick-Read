@@ -14,6 +14,8 @@ function MainPage() {
     setTable(!table);
   }
 
+  /* MainPage contains basic explainations of how site works and more specific 
+  explaination inside expandable parts */
   return (
     <div>
       <h1 className={classes.name}>Quick Read</h1>

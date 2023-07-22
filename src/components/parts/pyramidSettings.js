@@ -1,8 +1,11 @@
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExpand } from "@fortawesome/free-solid-svg-icons";
+
 import classes from "./pyramidSettings.module.css";
 
-import { useState } from "react";
-
 function PyramidSettings() {
+  /* sets up states that will be used for creation of pyramid */
   var [space, setSpace] = useState(JSON.parse(localStorage.getItem("space")));
   var [line, setLine] = useState(JSON.parse(localStorage.getItem("line")));
   var [loop, setLoop] = useState(JSON.parse(localStorage.getItem("loop")));
@@ -14,6 +17,7 @@ function PyramidSettings() {
     JSON.parse(localStorage.getItem("letters"))
   );
 
+  /* edits states and after that runs dispatch for window.addEventListener("storage" to work in same page */
   function spaceIncrease() {
     setSpace(space + 0.1);
     localStorage.setItem("space", JSON.stringify(space + 0.1));
@@ -77,9 +81,33 @@ function PyramidSettings() {
     window.dispatchEvent(new Event("storage"));
   }
 
+  /* turns on full screen */
+  function handleFullScreem() {
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      // Firefox
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      // Chrome, Safari and Opera
+      document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) {
+      // IE/Edge
+      document.documentElement.msRequestFullscreen();
+    }
+  }
+
+  /* provides buttons to change data that is used to create pyramid */
   return (
     <div>
-      <div className={classes.name}>Settings</div>
+      <div className={classes.name}>
+        Settings
+        <FontAwesomeIcon
+          className={classes.settings_img}
+          onClick={handleFullScreem}
+          icon={faExpand}
+        />
+      </div>
       <div className={classes.settings}>
         <div className={classes.option}>
           Gap Size
