@@ -6,7 +6,7 @@ import classes from "./mainNavigation.module.css";
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <Link to="/" className={classes.logo}>
+      <Link to="/Quick-Read" className={classes.logo}>
         Quick Read
       </Link>
       <div className={classes.links}>
