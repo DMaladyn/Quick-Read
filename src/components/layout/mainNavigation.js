@@ -12,10 +12,10 @@ function MainNavigation() {
       <div className={classes.links}>
         <ul>
           <li>
-            <Link to="/pyramid">Pyramid</Link>
+            <Link to="/Quick-Read/pyramid">Pyramid</Link>
           </li>
           <li>
-            <Link to="/table">Table</Link>
+            <Link to="/Quick-Read/table">Table</Link>
           </li>
         </ul>
       </div>
