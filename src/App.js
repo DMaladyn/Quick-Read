@@ -13,8 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/Quick-Read" element={<MainPage />} />
-        <Route path="/pyramid" element={<Pyramid />} />
-        <Route path="/table" element={<Table />} />
+        <Route path="/Quick-Read/pyramid" element={<Pyramid />} />
+        <Route path="/Quick-Read/table" element={<Table />} />
       </Routes>
     </Layout>
   );
