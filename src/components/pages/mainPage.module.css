@@ -15,11 +15,28 @@
 
 .descr span {
   padding: 0.4rem;
-  background-color: rgb(224, 210, 192);
-  border-radius: 0.6rem;
-  border: 2px solid #3f5c4c;
+  /* background: radial-gradient(rgb(230, 204, 174), rgb(233, 220, 204)); */
+  text-shadow: 0 0 30px rgb(235, 188, 131);
 }
 
 .expandable:hover {
   cursor: pointer;
+}
+
+.text ul {
+  margin: 0.75em 0;
+  padding: 0 1em;
+  list-style: none;
+}
+.text li::before {
+  content: "";
+  border-color: transparent #111;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 1.1em;
+  position: relative;
 }

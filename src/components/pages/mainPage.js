@@ -3,8 +3,8 @@ import classes from "./mainPage.module.css";
 import { useState } from "react";
 
 function MainPage() {
-  const [pyramid, setPyramid] = useState(false);
-  const [table, setTable] = useState(false);
+  const [pyramid, setPyramid] = useState(true);
+  const [table, setTable] = useState(true);
 
   function pyramidDescr() {
     setPyramid(!pyramid);
@@ -20,8 +20,10 @@ function MainPage() {
     <div>
       <h1 className={classes.name}>Quick Read</h1>
       <div className={classes.text}>
-        This web app will help you increase your reading speed. <br />
-        To do it you can use available exercises such as:
+        <h4>
+          This web app will help you increase your reading speed. <br />
+          To do it you can use available exercises such as:
+        </h4>
         <ul>
           <li>
             <div onClick={pyramidDescr} className={classes.expandable}>
