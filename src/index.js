@@ -9,7 +9,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
-  <meta name="google-site-verification" content="kiB1eltJX2KjhZHmDPrTvy-iB-3WEUQAwLlOW-eJnZo" />
     <App />
   </BrowserRouter>
 );
