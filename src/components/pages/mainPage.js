@@ -20,10 +20,10 @@ function MainPage() {
     <div>
       <h1 className={classes.name}>Quick Read</h1>
       <div className={classes.text}>
-        <h4>
+        <h2>
           This web app will help you increase your reading speed. <br />
           To do it you can use available exercises such as:
-        </h4>
+        </h2>
         <ul>
           <li>
             <div onClick={pyramidDescr} className={classes.expandable}>

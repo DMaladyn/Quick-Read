@@ -1,0 +1,43 @@
+.personal {
+  margin: 0 auto 4px;
+
+  padding: 0 7px 0;
+
+  min-width: 320px;
+  height: 24px;
+  line-height: 24px;
+
+  display: flex;
+
+  font-size: 18px;
+  color: white;
+
+  background-color: rgba(117, 91, 34, 0.7);
+
+  box-shadow: 0 0 4px black;
+
+  border-radius: 16px;
+
+  opacity: 0.6;
+}
+
+.personal:hover {
+  opacity: 1;
+}
+
+.personalIcon {
+  height: 22px;
+  margin-left: 8px;
+  margin-right: 3px;
+}
+
+.personalLink {
+  display: flex;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.personalLink:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
